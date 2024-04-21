@@ -1,6 +1,10 @@
 {
-  "dependencies": {
-    "@biomejs/biome": "^1.7.0",
-    "zenn-cli": "^0.1.153"
-  }
+	"scripts": {
+		"preview": "zenn preview",
+		"article": "zenn new:article"
+	},
+	"dependencies": {
+		"@biomejs/biome": "^1.7.0",
+		"zenn-cli": "^0.1.153"
+	}
 }

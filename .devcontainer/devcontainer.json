@@ -2,7 +2,7 @@
 	"name": "zenn",
 	"dockerFile": "Dockerfile",
 	"shutdownAction": "none",
-	"postStartCommand": "npx zenn preview",
+	"postStartCommand": "npm run preview",
 	"forwardPorts": [8000],
 	"customizations": {
 		"vscode": {
