@@ -1,28 +1,29 @@
 {
-  "name": "zenn",
-  "dockerFile": "Dockerfile",
-  "shutdownAction": "none",
-  "postStartCommand": "zenn preview",
-  "forwardPorts": [8000],
-  "customizations": {
-    "vscode": {
-      "extensions": [
-        "esbenp.prettier-vscode",
-        "eamodio.gitlens",
-        "mhutchie.git-graph"
-      ],
-      "settings": {
-        "terminal.integrated.defaultProfile.linux": "bash",
-        "editor.formatOnSave": true,
-        "editor.tabSize": 2,
-        "editor.detectIndentation": false,
-        "editor.insertSpaces": true,
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "[jsonc]": {
-          "editor.defaultFormatter": "esbenp.prettier-vscode",
-          "editor.formatOnSave": true
-        }
-      }
-    }
-  }
+	"name": "zenn",
+	"dockerFile": "Dockerfile",
+	"shutdownAction": "none",
+	"postStartCommand": "npx zenn preview",
+	"forwardPorts": [8000],
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"biomejs.biome",
+				"eamodio.gitlens",
+				"mhutchie.git-graph",
+				"DavidAnson.vscode-markdownlint"
+			],
+			"settings": {
+				"terminal.integrated.defaultProfile.linux": "bash",
+				"editor.tabSize": 2,
+				"editor.detectIndentation": false,
+				"editor.insertSpaces": true,
+				"editor.formatOnSave": true,
+				"editor.codeActionsOnSave": {
+					"quickfix.biome": "explicit",
+					"source.fixAll.markdownlint": "explicit"
+				},
+				"editor.defaultFormatter": "biomejs.biome"
+			}
+		}
+	}
 }
